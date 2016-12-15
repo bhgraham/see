@@ -1,0 +1,23 @@
+{application, see_crawler,
+ [
+  {id, "see_crawler"},
+  {description, "Crawler of the Search Engine in Erlang"},
+  {vsn, "1"},
+  {modules, [
+      see_crawler,
+      see_crawler_app,
+      see_crawler_sup,
+      see_crawler_worker,
+      see_http
+  ]},
+  {registered, [
+      see_crawler_sup
+  ]},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  inets
+                 ]},
+  {mod, {see_crawler_app, []}},
+  {env, [{db_node, 'db@localhost'}]}
+ ]}.

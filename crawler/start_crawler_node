@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rebar3 compile || exit 1
+rebar3 shell --sname crawler@localhost --apps inets,see_crawler
